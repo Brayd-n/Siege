@@ -1,0 +1,88 @@
+SIEGEWATCH - HOW TO RUN THE GAME
+================================
+
+There are two ways to play: open the project in Godot, or run the Windows .exe.
+
+
+OPTION 1: PLAY FROM THE GODOT EDITOR
+------------------------------------
+You need Godot 4.7 (the Steam version works). Godot 4.3 or newer should also work.
+
+1. Open Godot. The Project Manager window appears.
+2. If Siegewatch is already in the list:
+     - Look at the small grey path under each "Siegewatch" entry.
+     - Pick the one whose path ends in  Desktop\assignment1c
+     - (Desktop\assignment1 is an old, different version. You can select it
+       and click "Remove" to take it off the list. This does not delete files.)
+   If it is not in the list:
+     - Click "Import".
+     - Browse to the assignment1c folder and select the file  project.godot
+     - Click "Import & Edit".
+3. Wait for the editor to finish importing (a progress bar at the start is
+   normal, it only takes long the first time).
+4. Press F5 (or the Play button, the triangle at the top right).
+
+If Godot says files changed on disk, click "Reload" (not "Resave").
+
+The first battle can take a little longer to load while your graphics card
+builds its shaders. After that it is cached and loads faster.
+
+
+OPTION 2: PLAY THE WINDOWS .EXE
+-------------------------------
+1. Open the  assignment1c\build  folder.
+2. Double-click  Siegewatch.exe
+3. If Windows shows "Windows protected your PC", click "More info" and then
+   "Run anyway". (This appears because the game isn't signed by a publisher.)
+
+The .exe is self-contained. You can copy it to another Windows PC and it will
+run there without Godot installed.
+
+
+IF THE GAME RUNS SLOWLY
+-----------------------
+- Laptops with two graphics chips may run the game on the weaker one.
+  Fix: Windows Settings > System > Display > Graphics > Add desktop app,
+  pick Godot (or Siegewatch.exe), click it, Options > High performance > Save.
+- In the game: Settings > untick "High graphics".
+- Keep a laptop plugged in.
+
+
+FIRST STEPS IN THE GAME
+-----------------------
+- Click a map on the Campaign screen, pick a hero and a difficulty.
+- Press H to place your hero for free, then recruit soldiers with 1-8 and
+  left-click beside the road.
+- Press Space to start the wave.
+- Settings > "Unlock all levels & soldiers (demo)" opens everything at once,
+  handy for showing the game to someone.
+
+
+CONTROLS
+--------
+Camera               WASD / arrow keys to move, mouse wheel to zoom,
+                     Q / E or right-drag to rotate
+Recruit soldier      1-8 (or click a card), left-click to place,
+                     Shift+click to keep placing
+Place hero           H (or the gold HERO card)
+Hero abilities       Z and X, then left-click to aim
+Move hero            Select the hero, then right-click the ground
+Select soldier       Left-click it
+Talk / special       T / G  (with a soldier selected)
+Targeting mode       Tab
+Start wave           Space
+Pause / speed        P / F  (buttons for 1x, 2x, 3x and Auto at the top right)
+Menu                 Esc
+Fullscreen           F11
+
+All gameplay keys can be changed in Settings > Key bindings.
+
+Debug keys (for testing): F1 +500 gold, F2-F5 spawn enemies,
+F6 finish the wave, F7 +10 lives, F8 next wave.
+
+
+SAVING
+------
+Progress (unlocks, Crowns, gear, hero mastery) saves automatically.
+To stop mid-battle, open the menu with Esc and choose "Save & quit to map",
+then use "Continue" on the main menu later.

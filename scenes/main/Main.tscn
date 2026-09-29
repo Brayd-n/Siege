@@ -1,0 +1,45 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://scripts/main/Main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/map/Map.tscn" id="2_map"]
+[ext_resource type="PackedScene" path="res://scenes/main/CameraRig.tscn" id="3_cam"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HUD.tscn" id="4_hud"]
+[ext_resource type="Script" path="res://scripts/managers/WaveManager.gd" id="5_wave"]
+[ext_resource type="Script" path="res://scripts/managers/EnemyManager.gd" id="6_enemy"]
+[ext_resource type="Script" path="res://scripts/managers/UnitManager.gd" id="7_unit"]
+[ext_resource type="Script" path="res://scripts/managers/PlacementManager.gd" id="8_place"]
+[ext_resource type="Script" path="res://scripts/managers/DialogueManager.gd" id="9_dialogue"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="Map" parent="." instance=ExtResource("2_map")]
+
+[node name="CameraRig" parent="." instance=ExtResource("3_cam")]
+
+[node name="Units" type="Node3D" parent="."]
+
+[node name="Enemies" type="Node3D" parent="."]
+
+[node name="Projectiles" type="Node3D" parent="."]
+
+[node name="Effects" type="Node3D" parent="."]
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="WaveManager" type="Node" parent="Managers"]
+script = ExtResource("5_wave")
+
+[node name="EnemyManager" type="Node" parent="Managers"]
+script = ExtResource("6_enemy")
+
+[node name="UnitManager" type="Node" parent="Managers"]
+script = ExtResource("7_unit")
+
+[node name="PlacementManager" type="Node" parent="Managers"]
+script = ExtResource("8_place")
+
+[node name="DialogueManager" type="Node" parent="Managers"]
+script = ExtResource("9_dialogue")
+
+[node name="HUD" parent="." instance=ExtResource("4_hud")]

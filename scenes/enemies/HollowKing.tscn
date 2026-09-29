@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemies/HollowKing.gd" id="1_enemy"]
+
+[node name="HollowKing" type="Node3D"]
+script = ExtResource("1_enemy")
+
+[node name="Model" type="Node3D" parent="."]

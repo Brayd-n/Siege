@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/main/CameraRig.gd" id="1_cam"]
+
+[node name="CameraRig" type="Node3D"]
+script = ExtResource("1_cam")
+
+[node name="Pitch" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.559193, 0.829038, 0, -0.829038, 0.559193, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Pitch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 58)
+current = true
+fov = 42.0
+near = 0.3
+far = 600.0
