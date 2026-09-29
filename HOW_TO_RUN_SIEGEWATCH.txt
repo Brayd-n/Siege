@@ -1,42 +1,41 @@
 SIEGEWATCH - HOW TO RUN THE GAME
 ================================
 
-There are two ways to play: open the project in Godot, or run the Windows .exe.
+Get the game from https://github.com/Brayd-n/Siege.
+You can play it from the Godot editor on Windows, macOS, or Linux, or run the
+ready-made Windows executable without installing Godot.
 
 
-OPTION 1: PLAY FROM THE GODOT EDITOR
-------------------------------------
-You need Godot 4.7 (the Steam version works). Godot 4.3 or newer should also work.
+OPTION 1: PLAY FROM THE GODOT EDITOR (WINDOWS, MACOS, OR LINUX)
+---------------------------------------------------------------
+1. Install Godot 4.7 (Godot 4.3 or newer should also work).
+2. Get the project files from the repository:
+     - On GitHub, click Code > Download ZIP, then extract the ZIP; or
+     - Run: git clone https://github.com/Brayd-n/Siege.git
+3. Open Godot. In the Project Manager, click Import, browse to the extracted
+   or cloned Siege folder, and select project.godot. Click Import & Edit.
+4. Wait for Godot to import the assets, then press F5 (or click the Play button).
 
-1. Open Godot. The Project Manager window appears.
-2. If Siegewatch is already in the list:
-     - Look at the small grey path under each "Siegewatch" entry.
-     - Pick the one whose path ends in  Desktop\assignment1c
-     - (Desktop\assignment1 is an old, different version. You can select it
-       and click "Remove" to take it off the list. This does not delete files.)
-   If it is not in the list:
-     - Click "Import".
-     - Browse to the assignment1c folder and select the file  project.godot
-     - Click "Import & Edit".
-3. Wait for the editor to finish importing (a progress bar at the start is
-   normal, it only takes long the first time).
-4. Press F5 (or the Play button, the triangle at the top right).
-
-If Godot says files changed on disk, click "Reload" (not "Resave").
-
-The first battle can take a little longer to load while your graphics card
-builds its shaders. After that it is cached and loads faster.
+The first launch may take longer while Godot imports assets and builds shaders.
 
 
 OPTION 2: PLAY THE WINDOWS .EXE
 -------------------------------
-1. Open the  assignment1c\build  folder.
-2. Double-click  Siegewatch.exe
-3. If Windows shows "Windows protected your PC", click "More info" and then
-   "Run anyway". (This appears because the game isn't signed by a publisher.)
+The executable is stored with Git LFS because it is larger than GitHub's normal
+file limit. To get the actual executable, install Git and Git LFS, then run:
 
-The .exe is self-contained. You can copy it to another Windows PC and it will
-run there without Godot installed.
+    git lfs install
+    git clone https://github.com/Brayd-n/Siege.git
+    cd Siege
+    git lfs pull
+
+Open the build folder in the cloned Siege folder and double-click Siegewatch.exe.
+If the file is only a tiny text pointer, Git LFS did not download it; run
+git lfs pull again inside the Siege folder. A GitHub Code > Download ZIP copy
+may contain that pointer instead of the executable.
+
+The executable is self-contained, so Godot is not needed to play it. Windows
+may show a SmartScreen warning because the executable is unsigned.
 
 
 IF THE GAME RUNS SLOWLY
